@@ -19,6 +19,7 @@ Functions to complete when free:
 - Optimize Firestore read and writes
 - Edit user profile
 - Sending multimedia files (images, voices, videos, etc.)
+- delete chatroom
 - More...
 
 
