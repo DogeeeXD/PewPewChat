@@ -1,16 +1,33 @@
 # PewPewChat
 
-A new Flutter project.
+A Chat App built using Flutter to demonstrate the use of using Flutter and Firebase services.
 
-## Getting Started
+Basic functions are available such as:
+- Sign Up/ Sign In (email/password)
+- Avatar image upload
+- Add friend using email
+- Pending friend request list
+- Incoming friend request list
+- Delete friend by tap & hold on a friend, which shows a modal bottom sheet with delete option
+- Start 1 to 1 message by tapping on friend directly
+- Start group chat my tapping FAB and select friends
+- Real-time text messaging
 
-This project is a starting point for a Flutter application.
+Functions to complete when free:
+- Forget password
+- Email verification (password-less link login)
+- Optimize Firestore read and writes
+- Edit user profile
+- Sending multimedia files (images, voices, videos, etc.)
+- More...
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Note
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ - Firebase config files are not uploaded for privacy issue.
+ 
+ - Automated push notification is not available because NodeJS 10 is needed and I currently don't have Blaze plan for Firebase. 
+
+ - The code isn't optimized as this is just a demo, not a production app.
+ 
+ - Some functions are not yet implemented due to limited free time.
