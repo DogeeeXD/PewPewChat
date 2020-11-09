@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:PewPewChat/services/auth_service.dart';
@@ -25,18 +26,33 @@ class _AuthScreenState extends State<AuthScreen> {
     bool isLogin,
     BuildContext context,
   ) async {
-    // AuthResult authResult;
+    UserCredential authResult;
 
     try {
       setState(() {
         _isLoading = true;
       });
       if (isLogin) {
-        AuthService().loginUser(email, password);
-        
+        //AuthService().loginUser(email, password);
+
+        authResult = await _auth
+            .signInWithEmailAndPassword(
+          email: email,
+          password: password,
+        )
+            .catchError((err) {
+          Scaffold.of(context).showSnackBar(
+            SnackBar(
+              content: Text('An error occured, please check your credentials!'),
+              backgroundColor: Theme.of(context).errorColor,
+            ),
+          );
+          setState(() {
+            _isLoading = false;
+          });
+        });
       } else {
         AuthService().createUser(email, password, username, image);
-        
       }
     } on PlatformException catch (err) {
       var message = 'An error occured, please check your credentials!';
@@ -58,6 +74,13 @@ class _AuthScreenState extends State<AuthScreen> {
       setState(() {
         _isLoading = false;
       });
+
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text(err),
+          backgroundColor: Theme.of(context).errorColor,
+        ),
+      );
     }
   }
 
