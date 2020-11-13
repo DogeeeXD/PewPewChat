@@ -3,7 +3,7 @@
 A Chat App built using Flutter to demonstrate the use of using Flutter and Firebase services.
 
 ## Screenshots
-![1](https://ghcdn.rawgit.org/DogeeeXD/PewPewChat/main/screenshots/1.PNG)
+![1](https://ghcdn.rawgit.org/DogeeeXD/PewPewChat/main/screenshots/1.png)
 ![2](https://ghcdn.rawgit.org/DogeeeXD/PewPewChat/main/screenshots/2.PNG)
 ![3](https://ghcdn.rawgit.org/DogeeeXD/PewPewChat/main/screenshots/3.PNG)
 ![4](https://ghcdn.rawgit.org/DogeeeXD/PewPewChat/main/screenshots/4.PNG)
