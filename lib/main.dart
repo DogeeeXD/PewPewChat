@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         future: _initialization,
         builder: (context, appSnapshot) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'PewPewChat',
             theme: AppTheme.lightTheme,
             home: appSnapshot.connectionState != ConnectionState.done

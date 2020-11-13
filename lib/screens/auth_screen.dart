@@ -91,11 +91,20 @@ class _AuthScreenState extends State<AuthScreen> {
         color: Theme.of(context).backgroundColor,
         alignment: Alignment.center,
         padding: const EdgeInsets.all(15),
-        child: SingleChildScrollView(
-          child: AuthForm(
-            _isLoading,
-            _submitAuthForm,
-          ),
+        child: ListView(
+          children: [
+            Image.asset(
+              'assets/icons/pewpewchat.png',
+              width: 200,
+              height: 200,
+            ),
+            SingleChildScrollView(
+              child: AuthForm(
+                _isLoading,
+                _submitAuthForm,
+              ),
+            ),
+          ],
         ),
       ),
     );
