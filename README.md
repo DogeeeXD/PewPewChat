@@ -2,6 +2,18 @@
 
 A Chat App built using Flutter to demonstrate the use of using Flutter and Firebase services.
 
+## Screenshots
+![1](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/1.PNG)
+![2](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/2.PNG)
+![3](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/3.PNG)
+![4](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/4.PNG)
+![5](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/5.PNG)
+![6](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/6.PNG)
+![7](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/7.PNG)
+![8](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/8.PNG)
+![9](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/9.PNG)
+![10](https://raw.githubusercontent.com/DogeeeXD/PewPewChat/main/screenshots/10.PNG)
+
 Basic functions are available such as:
 - Sign Up/ Sign In (email/password)
 - Avatar image upload
