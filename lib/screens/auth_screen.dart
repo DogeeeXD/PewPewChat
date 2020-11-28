@@ -52,7 +52,7 @@ class _AuthScreenState extends State<AuthScreen> {
           });
         });
       } else {
-        AuthService().createUser(email, password, username, image);
+        AuthService().createUser(context, email, password, username, image);
       }
     } on PlatformException catch (err) {
       var message = 'An error occured, please check your credentials!';

@@ -3,11 +3,14 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class AuthService {
   final _auth = FirebaseAuth.instance;
 
   createUser(
+    BuildContext context,
     String email,
     String password,
     String username,
@@ -15,10 +18,19 @@ class AuthService {
   ) async {
     UserCredential authResult;
 
-    authResult = await _auth.createUserWithEmailAndPassword(
+    authResult = await _auth
+        .createUserWithEmailAndPassword(
       email: email,
       password: password,
-    );
+    )
+        .catchError((err) {
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text('An error occured, please check your credentials!'),
+          backgroundColor: Theme.of(context).errorColor,
+        ),
+      );
+    });
 
     if (image != null) {
       final ref = FirebaseStorage.instance
@@ -26,7 +38,7 @@ class AuthService {
           .child('user_images')
           .child(authResult.user.uid + '.jpg');
 
-      await ref.putFile(image).onComplete;
+      await ref.putFile(image);
 
       final imageUrl = await ref.getDownloadURL();
 
